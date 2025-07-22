@@ -1,89 +1,94 @@
 /* CSS for New Beginnings Shelter System - Tablet Styles (CIS133DA) */
-/* Applied to screens 768px and below */
+/* Applied to screens between 450px and 768px */
 
+/* Copy all styles from default.css and modify for tablet */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+/* Container adjustments for tablet */
 .container {
     padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #d5d5f1;
+    color: #1e3a5f;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .logo h1 {
     font-size: 32px;
+    font-weight: bold;
+    margin: 0;
 }
 
-/* Ensure contact page main header matches in tablet view */
-.contact-page header .logo h1,
-body.contact-page header .logo h1,
-html body.contact-page header[role="banner"] .logo h1 {
-    font-size: 32px !important;
-    font-weight: bold !important;
+/* Navigation - Vertical stack for tablet */
+.main-nav {
+    background-color: #021430;
+    padding: 10px 0;
 }
 
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu a {
+    color: #f5f102;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 20px;
+    display: block;
+    background-color: #021430;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(245, 241, 2, 0.1);
+}
+
+/* Active page navigation styling */
+.nav-menu a[aria-current="page"],
+.nav-menu a.active {
+    background-color: #e9ecef;
+    color: #1e3a5f;
+    font-weight: bold;
+}
+
+/* Page header adjustments */
 .page-header h1 {
     font-size: 32px;
-}
-
-/* Ensure contact page banner matches in tablet view */
-.contact-page .page-header h1,
-html body.contact-page div.page-header div.container h1 {
-    font-size: 32px !important;
 }
 
 .page-subtitle {
     font-size: 21px;
 }
 
-/* Navigation - Mobile navigation setup */
-.nav-menu {
-    display: none !important;
-    background-color: #1e3a5f;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    text-align: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* When JavaScript shows the menu */
-.nav-menu[style*="display: block"] {
-    display: block !important;
-}
-
-.nav-menu li {
-    display: block !important;
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-menu a {
-    padding: 15px 20px;
-    display: block !important;
-    color: #f5f102;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 0;
-}
-
-.mobile-menu-btn {
-    display: block !important;
-    background: none;
-    border: 2px solid white;
-    color: white;
-    font-size: 19px;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-    margin-top: 10px;
-}
-
-.main-nav {
-    position: relative;
-}
-
-/* Layout adjustments - Single column layout */
+/* Layout adjustments - Single column */
 .two-column .column,
 .three-column .column,
 .footer-section,
