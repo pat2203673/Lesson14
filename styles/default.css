@@ -115,9 +115,18 @@ header {
     font-weight: bold;
 }
 
-/* Mobile Navigation - Hidden on Desktop */
+/* Mobile Navigation - Show by default for testing */
 .mobile-menu-btn {
-    display: none;
+    display: block !important;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
 }
 
 /* Page Header */
@@ -691,6 +700,13 @@ footer {
     
     .section-label {
         font-size: 24px;
+    }
+}
+
+/* Hide mobile button on desktop only */
+@media screen and (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none !important;
     }
 }
 
