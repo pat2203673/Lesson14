@@ -4,15 +4,13 @@
 
 This project contains two complete versions of the website to accommodate different course requirements:
 
-### **Original Version (Advanced)**
+### **CIS133DA Compliant Version**
 - **Files**: `index.html`, `services.html`, `resources.html`, `about.html`, `contact.html`
-- **Styles**: `styles/main.css`
-- **JavaScript**: Modern ES6+ features in `scripts/main.js`
-
-### **Simplified Version (CIS133-Appropriate)**
-- **Files**: `index-simple.html`, `services-simple.html`, `resources-simple.html`, `about-simple.html`, `contact-simple.html`
-- **Styles**: `styles/main-simple.css`
-- **JavaScript**: Basic techniques in `scripts/main.js`
+- **Styles**: Three separate CSS files for responsive design:
+  - `styles/default.css` - Desktop styles
+  - `styles/tablet.css` - Tablet styles (≤768px)
+  - `styles/mobile.css` - Mobile styles (≤480px)
+- **JavaScript**: Basic CIS133-appropriate techniques in `scripts/main.js`
 
 ## Key Differences
 
@@ -89,27 +87,26 @@ Lesson14/
 ├── services.html              # Original services
 ├── services-simple.html       # Simplified services
 ├── resources.html             # Original resources
-├── resources-simple.html      # Simplified resources
-├── about.html                 # Original about
-├── about-simple.html          # Simplified about
-├── contact.html               # Original contact
-├── contact-simple.html        # Simplified contact
+├── resources.html             # Resources page
+├── about.html                 # About page
+├── contact.html               # Contact page
 ├── styles/
-│   ├── main.css              # Advanced CSS with Flexbox/Grid
-│   └── main-simple.css       # Basic CSS with floats/blocks
+│   ├── default.css           # Desktop styles
+│   ├── tablet.css            # Tablet styles (≤768px)
+│   └── mobile.css            # Mobile styles (≤480px)
 ├── scripts/
-│   └── main.js               # Simplified JavaScript
-└── images/                   # Shared images
-```
+│   └── main.js               # CIS133DA-appropriate JavaScript
+└── images/                   # Website images
 
-## Testing Both Versions
+## Testing the Website
 
-1. **For Original Version**: Open `index.html` in your browser
-2. **For Simplified Version**: Open `index-simple.html` in your browser
+1. **Desktop**: Open `index.html` in your browser
+2. **Mobile Testing**: Visit https://pat2203673.github.io/Lesson14/ on your mobile device
+3. **Local Testing**: Use the provided PowerShell scripts for mobile viewport testing
 
-Both versions are fully functional and appropriate for different learning objectives.
+## Mobile Navigation
 
-## Recommendation
+The mobile navigation uses a hamburger menu (☰) that appears on screens 768px and below. Click the hamburger icon to toggle the navigation menu on mobile devices.
 
 **For CIS133DA specifically**, I recommend using the **simplified version** as it demonstrates mastery of fundamental web development concepts without advanced features that may be beyond the course scope.
 
