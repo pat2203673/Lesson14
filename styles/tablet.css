@@ -1,0 +1,87 @@
+/* CSS for New Beginnings Shelter System - Tablet Styles (CIS133DA) */
+/* Applied to screens 768px and below */
+
+.container {
+    padding: 0 15px;
+}
+
+.logo h1 {
+    font-size: 32px;
+}
+
+/* Ensure contact page main header matches in tablet view */
+.contact-page header .logo h1,
+body.contact-page header .logo h1,
+html body.contact-page header[role="banner"] .logo h1 {
+    font-size: 32px !important;
+    font-weight: bold !important;
+}
+
+.page-header h1 {
+    font-size: 32px;
+}
+
+/* Ensure contact page banner matches in tablet view */
+.contact-page .page-header h1,
+html body.contact-page div.page-header div.container h1 {
+    font-size: 32px !important;
+}
+
+.page-subtitle {
+    font-size: 21px;
+}
+
+/* Navigation - Show mobile navigation */
+.nav-menu {
+    display: none;
+    background-color: #1e3a5f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+}
+
+.nav-menu li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu a {
+    padding: 15px 20px;
+    display: block;
+}
+
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+.main-nav {
+    position: relative;
+}
+
+/* Layout adjustments - Single column layout */
+.two-column .column,
+.three-column .column,
+.footer-section,
+.form-row .form-group {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.section-label {
+    font-size: 24px;
+}
