@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patrick Lowell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Beginnings Shelter System - Helping the Homeless in Our Community</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Skip Navigation Link for Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <h1>New Beginnings Shelter System</h1>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <button class="mobile-menu-btn" 
+                    onclick="toggleMobileMenu()" 
+                    aria-label="Toggle mobile menu"
+                    aria-expanded="false"
+                    aria-controls="nav-menu">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header" role="banner">
+        <div class="container">
+            <h1>Welcome to New Beginnings</h1>
+            <p class="page-subtitle">Providing Hope and Shelter for Our Community</p>
+        </div>
+    </div>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="main" aria-labelledby="mission-heading">
+                <h2 id="mission-heading">Our Mission</h2>
+                <p style="font-size: 24px;">New Beginnings Shelter System is dedicated to helping homeless individuals and families in our community by providing safe shelter, essential services, and helping them on the road to permanent housing.</p>
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="services.html" class="btn" role="button" aria-describedby="services-description">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary" role="button" aria-describedby="help-description">Get Help Now</a>
+                    <span id="services-description" class="sr-only">Learn about our shelter, food, healthcare, and employment services</span>
+                    <span id="help-description" class="sr-only">Get immediate assistance or contact us for emergency shelter</span>
+                </div>
+            </section>
+
+            <section class="services-preview" aria-labelledby="services-section-heading">
+                <h2 class="section-label" id="services-section-heading">Essential Services We Provide</h2>
+                <div class="three-column clearfix">
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Safe Shelter</h3>
+                            <p>Clean, secure sleeping quarters with dignity and respect for all individuals.</p>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Meals & Nutrition</h3>
+                            <p>Three nutritious meals daily plus snacks and special dietary accommodations.</p>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Healthcare Access</h3>
+                            <p>Basic medical care, mental health support, and connections to healthcare providers.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="three-column clearfix">
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Employment Support</h3>
+                            <p>Job training, resume assistance, and employment placement services.</p>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Housing Assistance</h3>
+                            <p>Help finding permanent housing and assistance with applications and deposits.</p>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="service-card">
+                            <h3>Support Services</h3>
+                            <p>Case management, counseling, and connections to community resources.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-preview" aria-labelledby="about-section-heading">
+                <h2 class="section-label" id="about-section-heading">About New Beginnings</h2>
+                <div class="two-column clearfix">
+                    <div class="column">
+                        <h3>Our Commitment</h3>
+                        <p>We believe that everyone deserves a safe place to sleep and the opportunity to rebuild their life. Our comprehensive approach addresses immediate needs while working toward long-term solutions.</p>
+                        <p>Since our founding, we have helped thousands of individuals and families transition from homelessness to stable housing.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Community Impact</h3>
+                        <p>Working with local partners, government agencies, and volunteers, we create a network of support that extends far beyond our shelter walls.</p>
+                        <p>Our programs are designed to address the root causes of homelessness and provide sustainable solutions for our community members.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="accessibility-statement">
+        <div class="container">
+            <h3>Accessibility Statement</h3>
+            <p>New Beginnings Shelter System is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards. This statement was last updated on <span id="current-date">July 21, 2025</span>.</p>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content clearfix">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <address>
+                        123 Hope Street<br>
+                        Phoenix, AZ 85001<br>
+                        Phone: <a href="tel:602-555-4673" aria-label="Call us at 6 0 2 5 5 5 H O P E">(602) 555-HOPE</a><br>
+                        Email: <a href="mailto:info@newbeginnings.org">info@newbeginnings.org</a>
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav aria-label="Footer navigation">
+                        <a href="services.html">Services</a>
+                        <a href="resources.html">Resources</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>Volunteer opportunities</li>
+                        <li>Donation drives</li>
+                        <li>Community partnerships</li>
+                        <li>Fundraising events</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year" aria-label="Copyright 2025">2025</span> New Beginnings Shelter System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

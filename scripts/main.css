@@ -1,0 +1,585 @@
+/* CSS for New Beginnings Shelter System - CIS133DA */
+/* Using basic CSS techniques appropriate for CIS133 */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+/* Container for centering content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Header Styles */
+header {
+    background-color: #d5d5f1;
+    color: #1e3a5f;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: #021430;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-menu a {
+    color: #f5f102;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(245, 241, 2, 0.1);
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Page Header */
+.page-header {
+    background-image: url('../images/HomelessShelter1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Contact page specific header background */
+.contact-page .page-header {
+    background-image: url('../images/HomelessShelter2.jpg');
+}
+
+.page-subtitle {
+    font-size: 27px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+.section-label {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2c5aa0;
+}
+
+/* Basic Layout Classes */
+.two-column {
+    width: 100%;
+}
+
+.two-column .column {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.two-column .column:last-child {
+    margin-right: 0;
+}
+
+.three-column {
+    width: 100%;
+}
+
+.three-column .column {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+.three-column .column:last-child {
+    margin-right: 0;
+}
+
+/* Service Cards */
+.service-card {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.service-card h3 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.service-card p {
+    margin-bottom: 10px;
+}
+
+/* Services Table */
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.services-table th,
+.services-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.services-table th {
+    background-color: #2c5aa0;
+    color: white;
+    font-weight: bold;
+}
+
+.services-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Resource Items */
+.resource-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resource-item h3 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+/* Story Cards */
+.story-card {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.story-card h3 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+/* Team Members */
+.team-member {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.team-member h4 {
+    color: #2c5aa0;
+    margin-bottom: 5px;
+}
+
+.team-member .role {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Program Cards */
+.program-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.program-card h4 {
+    color: #2c5aa0;
+    margin-bottom: 10px;
+}
+
+/* Help Items */
+.help-item {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    height: auto;
+}
+
+.help-item h3 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Contact Containers */
+.contact-container {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.contact-container h3 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2c5aa0;
+}
+
+.contact-container p {
+    margin-bottom: 10px;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c5aa0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Buttons */
+.btn {
+    background-color: #2c5aa0;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #1e3a5f;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+/* Donation Form */
+.donation-amounts {
+    margin-bottom: 20px;
+}
+
+.amount-option {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+}
+
+.amount-option input[type="radio"] {
+    margin-right: 5px;
+}
+
+.amount-option label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#customAmountContainer {
+    display: none;
+    margin-top: 10px;
+}
+
+.frequency-options {
+    margin-bottom: 20px;
+}
+
+.frequency-option {
+    display: inline-block;
+    margin: 5px 15px 5px 0;
+}
+
+/* Error Messages */
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    width: 100%;
+}
+
+.footer-section {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h3 {
+    color: #f5f102;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #f5f102;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    clear: both;
+}
+
+/* Accessibility Statement */
+.accessibility-statement {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.accessibility-statement h3 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 32px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .page-subtitle {
+        font-size: 21px;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none;
+        background-color: #1e3a5f;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .nav-menu li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu a {
+        padding: 15px 20px;
+        display: block;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .main-nav {
+        position: relative;
+    }
+    
+    /* Layout adjustments */
+    .two-column .column,
+    .three-column .column,
+    .footer-section {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .section-label {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .page-header h1 {
+        font-size: 24px;
+    }
+    
+    .page-subtitle {
+        font-size: 18px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-nav,
+    .mobile-menu-btn,
+    footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .page-header {
+        background: none;
+        color: black;
+        padding: 20px 0;
+    }
+}

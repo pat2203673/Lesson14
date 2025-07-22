@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patrick Lowell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - New Beginnings Shelter System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="contact-page">
+    <!-- Skip Navigation Link for Screen Readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <div class="container">
+            <div class="logo">
+                <h1>New Beginnings Shelter System</h1>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="page-subtitle">Get Help or Get Involved</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="two-column clearfix">
+                <div class="column">
+                    <div class="contact-container">
+                        <h2>Emergency Assistance</h2>
+                        <p><strong>24/7 Emergency Line:</strong><br>(602) 555-HELP</p>
+                        <p><strong>Address:</strong><br>123 Hope Street<br>Phoenix, AZ 85001</p>
+                        <p><strong>Walk-in Hours:</strong><br>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday - Sunday: 9:00 AM - 5:00 PM</p>
+                    </div>
+
+                    <div class="contact-container">
+                        <h2>General Information</h2>
+                        <p><strong>Main Office:</strong><br>(602) 555-INFO</p>
+                        <p><strong>Email:</strong><br>info@newbeginnings.org</p>
+                        <p><strong>Volunteer Coordinator:</strong><br>volunteer@newbeginnings.org</p>
+                        <p><strong>Donations:</strong><br>donations@newbeginnings.org</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="contact-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" action="https://postscript.riosalado.edu/Forms/FormToEmail.asp?userid=rio&file=default" method="post" onsubmit="return validateContactForm()">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstName-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastName-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiryType">Type of Inquiry *</label>
+                                <select id="inquiryType" name="inquiryType" required>
+                                    <option value="">Please select...</option>
+                                    <option value="emergency">Emergency Assistance</option>
+                                    <option value="services">Services Information</option>
+                                    <option value="volunteer">Volunteer Opportunities</option>
+                                    <option value="donation">Donations</option>
+                                    <option value="general">General Information</option>
+                                </select>
+                                <span class="error-message" id="inquiryType-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Please provide details about your inquiry..."></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <section class="help-section">
+                <h2 class="section-label">Ways to Help</h2>
+                <div class="help-item">
+                    <h3>Volunteer</h3>
+                    <p>Join our team of dedicated volunteers who help serve meals, organize donations, and provide support to our guests.</p>
+                    <ul>
+                        <li>Meal service volunteers</li>
+                        <li>Administrative support</li>
+                        <li>Special event helpers</li>
+                        <li>Professional skills volunteers</li>
+                    </ul>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Spread Awareness</h3>
+                    <p>Help us reach more people who need our services by sharing our mission with your community.</p>
+                    <ul>
+                        <li>Share our website with others</li>
+                        <li>Follow us on social media</li>
+                        <li>Organize community awareness events</li>
+                        <li>Partner with local organizations</li>
+                    </ul>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Donate</h3>
+                    <p>Your financial contributions are greatly appreciated, they help us provide essential services and maintain our facility.</p>
+                    <p><strong>Make a Donation:</strong></p>
+                    <form id="donationForm" action="https://postscript.riosalado.edu/Forms/FormToEmail.asp?userid=rio&file=default" method="post" onsubmit="return validateDonationForm()">
+                        <div class="donation-amounts">
+                            <div class="amount-option">
+                                <input type="radio" id="amount-25" name="amount" value="25" onclick="hideCustomAmount()">
+                                <label for="amount-25">$25</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amount-50" name="amount" value="50" onclick="hideCustomAmount()">
+                                <label for="amount-50">$50</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amount-100" name="amount" value="100" onclick="hideCustomAmount()">
+                                <label for="amount-100">$100</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amount-custom" name="amount" value="custom" onclick="showCustomAmount()">
+                                <label for="amount-custom">Other Amount</label>
+                            </div>
+                        </div>
+
+                        <div id="customAmountContainer" style="display: none;">
+                            <label for="customAmount">Custom Amount:</label>
+                            <input type="number" id="customAmount" name="customAmount" min="1" step="0.01" placeholder="Enter amount">
+                        </div>
+
+                        <div class="frequency-options">
+                            <label>Donation Frequency:</label><br>
+                            <div class="frequency-option">
+                                <input type="radio" id="freq-once" name="frequency" value="once" checked>
+                                <label for="freq-once">One-time</label>
+                            </div>
+                            <div class="frequency-option">
+                                <input type="radio" id="freq-monthly" name="frequency" value="monthly">
+                                <label for="freq-monthly">Monthly</label>
+                            </div>
+                        </div>
+
+                        <div class="two-column clearfix">
+                            <div class="column">
+                                <h4>Personal Information</h4>
+                                <div class="form-group">
+                                    <label for="donorFirstName">First Name *</label>
+                                    <input type="text" id="donorFirstName" name="donorFirstName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donorLastName">Last Name *</label>
+                                    <input type="text" id="donorLastName" name="donorLastName" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="donorEmail">Email Address *</label>
+                                    <input type="email" id="donorEmail" name="donorEmail" required>
+                                </div>
+
+                                <h4>Payment Information</h4>
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group half-width">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                    </div>
+                                    <div class="form-group half-width">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cardholderName">Cardholder Name *</label>
+                                    <input type="text" id="cardholderName" name="cardholderName" required>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <h4>Billing Address</h4>
+                                <div class="form-group">
+                                    <label for="billingAddress">Street Address *</label>
+                                    <input type="text" id="billingAddress" name="billingAddress" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="billingCity">City *</label>
+                                    <input type="text" id="billingCity" name="billingCity" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group half-width">
+                                        <label for="billingState">State *</label>
+                                        <select id="billingState" name="billingState" required>
+                                            <option value="">Select State</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="CA">California</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="NM">New Mexico</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group half-width">
+                                        <label for="billingZip">ZIP Code *</label>
+                                        <input type="text" id="billingZip" name="billingZip" maxlength="5" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="billingAddress2">Apartment, Suite, etc. (Optional)</label>
+                                    <input type="text" id="billingAddress2" name="billingAddress2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phoneNumber">Phone Number (Optional)</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(602) 555-0123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn">Donate Now</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="accessibility-statement">
+        <div class="container">
+            <h3>Accessibility Statement</h3>
+            <p>New Beginnings Shelter System is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards. This statement was last updated on <span id="current-date">July 21, 2025</span>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content clearfix">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>123 Hope Street<br>
+                    Phoenix, AZ 85001<br>
+                    Phone: (602) 555-HOPE<br>
+                    Email: info@newbeginnings.org</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="services.html">Services</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Get Involved</h3>
+                    <p>Volunteer opportunities<br>
+                    Donation drives<br>
+                    Community partnerships<br>
+                    Fundraising events</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2025</span> New Beginnings Shelter System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
